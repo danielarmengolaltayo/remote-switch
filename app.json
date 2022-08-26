@@ -1,0 +1,13 @@
+{
+  "name": "Remote Controller",
+  "website": "https://github.com/danielarmengolaltayo/remote_controller",
+  "repository": "https://github.com/danielarmengolaltayo/remote_controller",
+  "success_url": "/",
+  "scripts": {
+  },
+  "addons": [
+  ],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+  }
+}

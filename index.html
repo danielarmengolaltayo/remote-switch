@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remote Controller</title>
+    <style>
+      body{
+        margin: 0px;
+      }
+      #container {
+        height: 100vh;
+        /* Center vertically and horizontally */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #button{
+        height: 100%;
+        width: 100%;
+        background-color: red;
+      }
+      #button:hover{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="container">
+      <div id="button"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      var socket = io();
+
+      var buttonState = false;
+      updateState();
+
+      function updateState(){
+        if(buttonState){
+          document.getElementById('button').style.backgroundColor = "white";
+        }else{
+          document.getElementById('button').style.backgroundColor = "black";
+        }
+      }
+
+      button.addEventListener('click', function () {
+        buttonState = !buttonState;
+        socket.emit('button state', buttonState);
+      });
+
+      socket.on('button state', function(state) {
+        buttonState = state;
+        updateState();
+      });
+
+    </script>
+  </body>
+</html>
