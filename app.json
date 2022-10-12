@@ -1,7 +1,7 @@
 {
-  "name": "Remote Controller",
-  "website": "https://github.com/danielarmengolaltayo/remote_controller",
-  "repository": "https://github.com/danielarmengolaltayo/remote_controller",
+  "name": "Remote Switch",
+  "website": "https://github.com/danielarmengolaltayo/remote-switch",
+  "repository": "https://github.com/danielarmengolaltayo/remote-switch",
   "success_url": "/",
   "scripts": {
   },
